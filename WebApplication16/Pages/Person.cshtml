@@ -1,0 +1,17 @@
+﻿@page
+@model WebApplication16.Pages.PersonModel
+@{
+}
+@using WebApplication16.Models
+
+<h2>Список пользователей</h2>
+<table class="table">
+    <tr><td>Name</td><td>Age</td></tr>
+    @foreach (Person person in Model.DisplayedPeople)
+    {
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+        </tr>
+    }
+</table>
